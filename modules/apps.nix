@@ -26,24 +26,57 @@
       cleanup = "zap";
     };
 
-    taps = [ "CtrlSpice/homebrew-otel-desktop-viewer" ];
+    taps = [ ];
 
     # brew install
-    brews = [ "otel-desktop-viewer" ];
+    brews = [
+      "pinentry-mac"
+    ];
 
     # brew install --cask
     # these need to be updated manually
-    casks = [ "swiftbar" "spotify" "zoom" "intellij-idea" ];
+    casks = [
+      "1password"                   # password manager
+      "beeper"                      # Multiprotocol instant messaging app
+      "betterdisplay"               # Display management app
+      "capacities"                  # Note taking app
+      "chatgpt"                     # AI chatbot
+      "datagrip"                    # Database IDE
+      "elgato-camera-hub"           # Camera hub
+      "elgato-stream-deck"          # Stream deck
+      "elgato-wave-link"            # Wave link
+      "fantastical"                 # Calendar app
+      "font-fira-code"              # Fira code font
+      "font-fira-code-nerd-font"    # Fira code nerd font
+      "font-hack-nerd-font"         # Hack nerd font
+      "ghostty"                     # Terminal emulator
+      "gpg-suite-no-mail"           # GPG suite
+      "inkscape"                    # Vector graphics editor
+      "intellij-idea"                # IDE
+      "mutedeck"                    # Mute deck
+      "obs"                         # Open Broadcaster Software
+      "obs-advanced-scene-switcher" # Advanced scene switcher
+      "obs-backgroundremoval"       # Background removal
+      "openaudible"                 # Audible audiobook converter
+      "orbstack"                    # Docker Desktop replacement
+      "orion"                       # Web Browser
+      "philips-hue-sync"            # Hue sync
+      "proton-drive"                # Proton drive
+      "proton-mail"                 # Proton mail
+      "proton-pass"                 # Proton pass
+      "protonvpn"                   # Proton VPN
+      "raindropio"                  # Bookmark manager
+      "raycast"                     # Raycast
+      "shottr"                      # Screenshot app
+      "slack"                       # Slack
+      "the-unarchiver"              # Unarchiver
+      "zed"                         # Text editor
+    ];
 
     # mac app store
     # click
     masApps = {
       amphetamine = 937984704;
-      kindle = 302584613;
-      tailscale = 1475387142;
-
-      # useful for debugging macos key codes
-      #key-codes = 414568915;
     };
   };
 }

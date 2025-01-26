@@ -22,20 +22,20 @@
   nix.settings.trusted-users = [ "root" "@admin" ];
   # sudo launchctl list org.nixos.linux-builder
   # sudo launchctl stop org.nixos.linux-builder
-  nix.linux-builder = {
-    enable = true;
-    ephemeral = true;
-    maxJobs = 4;
-    config = {
-      virtualisation = {
-        darwin-builder = {
-          diskSize = 40 * 1024; # 40gb
-          memorySize = 8 * 1024; # 8gb
-        };
-        cores = 6;
-      };
-    };
-  };
+  # nix.linux-builder = {
+  #   enable = true;
+  #   ephemeral = true;
+  #   maxJobs = 4;
+  #   config = {
+  #     virtualisation = {
+  #       darwin-builder = {
+  #         diskSize = 40 * 1024; # 40gb
+  #         memorySize = 8 * 1024; # 8gb
+  #       };
+  #       cores = 6;
+  #     };
+  #   };
+  # };
   # try it
   # nix build --impure  --expr '(with import <nixpkgs> { system = "aarch64-linux"; }; runCommand "foo" { nativeBuildInputs = [ neofetch ]; } "neofetch >> $out" )' && cat result
 }

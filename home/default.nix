@@ -11,7 +11,6 @@
 #    ./gw.nix
     ./gpg.nix
     ./bat.nix
-    (inputs.nix-home-manager + "/modules")
   ];
 
   # home manager needs this
@@ -32,10 +31,10 @@
     lazygit
     neovim
     oh-my-posh
+    pinentry_mac
     ripgrep
     tldr
     tree-sitter
-    usage
     zoxide
   ];
 
