@@ -36,6 +36,7 @@
     ripgrep
     tldr
     tree-sitter
+    viu
     zoxide
   ];
 
