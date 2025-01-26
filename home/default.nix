@@ -24,6 +24,7 @@
   home.packages = with pkgs; [
     coreutils
     eza # modern replacement for `ls`
+    delta
     fd # modern replacement for `find`
     fzf
     git
