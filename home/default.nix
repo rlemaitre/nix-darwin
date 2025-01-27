@@ -48,5 +48,35 @@
   # TODO hardware.keyboard.zsa.enable
 
   home.file = {
+    "~/.config/ghostty" = {
+      enable = true;
+      source = ./files/ghostty;
+      recursive = true;
+    };
+    "~/.config/nvim" = {
+      enable = true;
+      source = ./files/nvim;
+      recursive = true;
+    };
+    "~/.config/oh-my-posh" = {
+      enable = true;
+      source = ./files/oh-my-posh;
+      recursive = true;
+    };
+    "~/.config/pistol" = {
+      enable = true;
+      source = ./files/pistol;
+      recursive = true;
+    };
+    "~/.config/zed" = {
+      enable = true;
+      source = ./files/zed;
+      recursive = true;
+    };
+    "~/.config/zsh" = {
+      enable = true;
+      source = ./files/zsh;
+      recursive = true;
+    };
   };
 }

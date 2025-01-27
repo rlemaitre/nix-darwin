@@ -1,0 +1,4 @@
+theme = light:catppuccin-latte,dark:nord
+copy-on-select = true
+macos-titlebar-style = tabs
+window-theme = system
