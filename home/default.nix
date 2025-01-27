@@ -11,7 +11,6 @@
 #    ./gw.nix
     ./gpg.nix
     ./bat.nix
-    ./pistol.nix
   ];
 
   # home manager needs this
@@ -31,7 +30,6 @@
     fzf
     fzf-git-sh
     gh
-    gh-f
     git
     gnupg
     hexyl
