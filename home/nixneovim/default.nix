@@ -202,19 +202,19 @@ programs.nixneovim = {
           desc = "Toggle word";
         };
         "<C-Right>" = {
-          action = "<C-w>l";
+          action = "\"<C-w>l\"";
           desc = "Go to right split";
         };
         "<C-Left>" = {
-          action = "<C-w>l";
+          action = "\"<C-w>l\"";
           desc = "Go to left split";
         };
         "<C-Up>" = {
-          action = "<C-w>k";
+          action = "\"<C-w>k\"";
           desc = "Go to up split";
         };
         "<C-Down>" = {
-          action = "<C-w>l";
+          action = "\"<C-w>l\"";
           desc = "Go to down split";
         };
       };
@@ -322,6 +322,68 @@ programs.nixneovim = {
       lspconfig = {
         enable = true;
         # TODO: add lspconfig configuration
+        servers = {
+          bashls = {
+            enable = true;
+          };
+          clangd = {
+            enable = true;
+          };
+          cssls = {
+            enable = true;
+          };
+          eslint = {
+            enable = true;
+          };
+          gopls = {
+            enable = true;
+          };
+          hls = {
+            enable = true;
+          };
+          html = {
+            enable = true;
+          };
+          jsonls = {
+            enable = true;
+          };
+          kotlin-language-server = {
+            enable = true;
+          };
+          lua-language-server = {
+            enable = true;
+          };
+          nil = {
+            # Nix Language Server
+            enable = true;
+          };
+          ocamllsp = {
+            enable = true;
+          };
+          pyright = {
+            enable = true;
+          };
+          rust-analyzer = {
+            enable = true;
+          };
+          taplo = {
+            # TOML Language Server
+            enable = true;
+          };
+          terraform-ls = {
+            enable = true;
+          };
+          typescript-language-server = {
+            enable = true;
+          };
+          vuels = {
+            enable = true;
+          };
+        };
+      };
+      lspkind = {
+        enable = true;
+        mode = "symbol_text";
       };
       lualine = {
         enable = true;
