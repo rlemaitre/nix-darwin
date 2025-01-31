@@ -272,8 +272,17 @@ programs.nixneovim = {
           tailwind = true;
         };
       };
+      comment-frame = {
+        enable = true;
+        autoIndent = true;
+        keymap = "<leader>/f";
+        multiline_keymap = "<leader>/m";
+      };
       copilot = {
         enable = true;
+      };
+      diffview = {
+        enable  = true;
       };
       floaterm = {
         enable = true;
