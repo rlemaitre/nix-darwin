@@ -198,7 +198,7 @@ programs.nixneovim = {
           desc = "Toggle comment";
         };
         "<leader>si" = {
-          action = "\"require('nvim-toggler').toggle\"";
+          action = "function() require('nvim-toggler').toggle() end";
           desc = "Toggle word";
         };
       };
@@ -247,6 +247,19 @@ programs.nixneovim = {
       };
     };
     plugins = {
+      barbar = {
+        enable = true;
+        autoHide = false;
+        clickable = true;
+        closable = true;
+        tabpages = true;
+        extraConfig = {
+          focus_on_close = "previous";
+          sidebar_filetypes = {
+            NvimTree = true;
+          };
+        };
+      };
       bufferline = {
         enable = true;
         separatorStyle = "slant";
