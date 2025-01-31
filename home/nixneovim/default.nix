@@ -69,181 +69,181 @@ programs.nixneovim = {
         "x" = "'\"_x'";
         # Increment/Decrement numbers
         "<leader>+" = {
-          action = "'<C-a>'";
+          action = "\"<C-a>\"";
           desc = "Increment number";
         };
         "<leader>-" = {
-          action = "'<C-x>'";
+          action = "\"<C-x>\"";
           desc = "Decrement number";
         };
         # Window management
         "<leader>wv" = {
-          action = "'<C-w>v'";
+          action = "\"<C-w>v\"";
           desc = "Split window vertically";
         };
         "<leader>wh" = {
-          action = "'<C-w>s'";
+          action = "\"<C-w>s\"";
           desc = "Split window horizontally";
         };
         "<leader>we" = {
-          action = "'<C-w>='";
+          action = "\"<C-w>=\"";
           desc = "Make splits equal size";
 
         };
         "<leader>wx" = {
-          action = "'<cmd>close<CR>'";
+          action = "\"<cmd>close<CR>\"";
           desc = "Close current split";
         };
         # Tab Management
         "<leader>To" = {
-          action = "'<cmd>tabnew<CR>'";
+          action = "\"<cmd>tabnew<CR>\"";
           desc = "Open new tab";
         };
         "<leader>Tx" = {
-          action = "'<cmd>tabclose<CR>'";
+          action = "\"<cmd>tabclose<CR>\"";
           desc = "Close current tab";
         };
         "<leader>Tn" = {
-          action = "'<cmd>tabn<CR>'";
+          action = "\"<cmd>tabn<CR>\"";
           desc = "Go to new tab";
         };
         "<leader>Tp" = {
-          action = "'<cmd>tabp<CR>'";
+          action = "\"<cmd>tabp<CR>\"";
           desc = "Go to previous tab";
         };
         "<leader>Tf" = {
-          action = "'<cmd>tabnew %<CR>'";
+          action = "\"<cmd>tabnew %<CR>\"";
           desc = "Open current buffer in a new tab";
         };
         # nvim-tree
         "<leader>ee" = {
-          action = "'<cmd>NvimTreeToggle<CR>'";
+          action = "\"<cmd>NvimTreeToggle<CR>\"";
           desc = "Toggle file explorer";
         };
         "<leader>ef" = {
-          action = "'<cmd>NvimTreeFindFileToggle<CR>'";
+          action = "\"<cmd>NvimTreeFindFileToggle<CR>\"";
           desc = "Toggle file explorer on current file";
         };
         "<leader>ec" = {
-          action = "'<cmd>NvimTreeCollapse<CR>'";
+          action = "\"<cmd>NvimTreeCollapse<CR>\"";
           desc = "Collapse file explorer";
         };
         "<leader>er" = {
-          action = "'<cmd>NvimTreeRefresh<CR>'";
+          action = "\"<cmd>NvimTreeRefresh<CR>\"";
           desc = "Refresh file explorer";
         };
         # Terminal
         "<leader>tn" = {
-          action = "'<cmd>FloatermNew<CR>'";
+          action = "\"<cmd>FloatermNew<CR>\"";
           desc = "Open new terminal";
         };
         "<leader>tj" = {
-          action = "'<cmd>FloatermPrev<CR>'";
+          action = "\"<cmd>FloatermPrev<CR>\"";
           desc = "Open previous terminal";
         };
         "<leader>tk" = {
-          action = "'<cmd>FloatermNext<CR>'";
+          action = "\"<cmd>FloatermNext<CR>\"";
           desc = "Open next terminal";
         };
         "<leader>tt" = {
-          action = "'<cmd>FloatermToggle<CR>'";
+          action = "\"<cmd>FloatermToggle<CR>\"";
           desc = "Toggle terminal";
         };
         # NerdCommenter
         "<leader>/$" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'ToEOL')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'ToEOL')<CR>\"";
           desc = "Comment until end of line";
         };
       };
       normalVisualOp = {
         # NerdCommenter
         "<leader>//" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Toggle')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Toggle')<CR>\"";
           desc = "Toggle comment";
         };
         "<leader>/c" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Comment')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Comment')<CR>\"";
           desc = "Comment";
         };
         "<leader>/i" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Invert')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Invert')<CR>\"";
           desc = "Invert comment";
         };
         "<leader>/m" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Minimal')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Minimal')<CR>\"";
           desc = "Minimal comment";
         };
         "<leader>/n" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Nested')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Nested')<CR>\"";
           desc = "Nested comment";
         };
         "<leader>/y" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Yank')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Yank')<CR>\"";
           desc = "Yank then comment";
         };
         "<leader>/u" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Uncomment')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Uncomment')<CR>\"";
           desc = "Uncomment";
         };
         "<leader>/l" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'AlignLeft')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'AlignLeft')<CR>\"";
           desc = "Left-aligned comment";
         };
         "<leader>/b" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'AlignBoth')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'AlignBoth')<CR>\"";
           desc = "Left-and-right-aligned comment";
         };
         "<leader>s/" = {
-          action = "'<cmd>:call nerdcommenter#Comment('', 'Toggle')'";
+          action = "\"<cmd>:call nerdcommenter#Comment('', 'Toggle')<CR>\"";
           desc = "Toggle comment";
         };
         "<leader>si" = {
-          action = "'require(\'nvim-toggler\').toggle'";
+          action = "\"require('nvim-toggler').toggle\"";
           desc = "Toggle word";
         };
       };
       insert = {
         # Handle correctly accentuated letters
-        "<A-e>a" = { action = "'á'"; silent = true; };
-        "<A-e>e" = { action = "'é'"; silent = true; };
-        "<A-e>i" = { action = "'í'"; silent = true; };
-        "<A-e>o" = { action = "'ó'"; silent = true; };
-        "<A-e>u" = { action = "'ú'"; silent = true; };
-        "<A-e>A" = { action = "'Á'"; silent = true; };
-        "<A-e>E" = { action = "'É'"; silent = true; };
-        "<A-e>I" = { action = "'Í'"; silent = true; };
-        "<A-e>O" = { action = "'Ó'"; silent = true; };
-        "<A-e>U" = { action = "'Ú'"; silent = true; };
-        "<A-`>a" = { action = "'á'"; silent = true; };
-        "<A-`>e" = { action = "'é'"; silent = true; };
-        "<A-`>i" = { action = "'í'"; silent = true; };
-        "<A-`>o" = { action = "'ó'"; silent = true; };
-        "<A-`>u" = { action = "'ú'"; silent = true; };
-        "<A-`>A" = { action = "'Á'"; silent = true; };
-        "<A-`>E" = { action = "'É'"; silent = true; };
-        "<A-`>I" = { action = "'Í'"; silent = true; };
-        "<A-`>O" = { action = "'Ó'"; silent = true; };
-        "<A-`>U" = { action = "'Ú'"; silent = true; };
-        "<A-i>a" = { action = "'â'"; silent = true; };
-        "<A-i>e" = { action = "'ê'"; silent = true; };
-        "<A-i>i" = { action = "'î'"; silent = true; };
-        "<A-i>o" = { action = "'ô'"; silent = true; };
-        "<A-i>u" = { action = "'û'"; silent = true; };
-        "<A-i>A" = { action = "'Â'"; silent = true; };
-        "<A-i>E" = { action = "'Ê'"; silent = true; };
-        "<A-i>I" = { action = "'Î'"; silent = true; };
-        "<A-i>O" = { action = "'Ô'"; silent = true; };
-        "<A-i>U" = { action = "'Û'"; silent = true; };
-        "<A-u>a" = { action = "'ä'"; silent = true; };
-        "<A-u>e" = { action = "'ë'"; silent = true; };
-        "<A-u>i" = { action = "'ï'"; silent = true; };
-        "<A-u>o" = { action = "'ö'"; silent = true; };
-        "<A-u>u" = { action = "'ü'"; silent = true; };
-        "<A-u>A" = { action = "'Ä'"; silent = true; };
-        "<A-u>E" = { action = "'Ë'"; silent = true; };
-        "<A-u>I" = { action = "'Ï'"; silent = true; };
-        "<A-u>O" = { action = "'Ö'"; silent = true; };
-        "<A-u>U" = { action = "'Ü'"; silent = true; };
+        "<A-e>a" = { action = "\"á\""; silent = true; };
+        "<A-e>e" = { action = "\"é\""; silent = true; };
+        "<A-e>i" = { action = "\"í\""; silent = true; };
+        "<A-e>o" = { action = "\"ó\""; silent = true; };
+        "<A-e>u" = { action = "\"ú\""; silent = true; };
+        "<A-e>A" = { action = "\"Á\""; silent = true; };
+        "<A-e>E" = { action = "\"É\""; silent = true; };
+        "<A-e>I" = { action = "\"Í\""; silent = true; };
+        "<A-e>O" = { action = "\"Ó\""; silent = true; };
+        "<A-e>U" = { action = "\"Ú\""; silent = true; };
+        "<A-`>a" = { action = "\"á\""; silent = true; };
+        "<A-`>e" = { action = "\"é\""; silent = true; };
+        "<A-`>i" = { action = "\"í\""; silent = true; };
+        "<A-`>o" = { action = "\"ó\""; silent = true; };
+        "<A-`>u" = { action = "\"ú\""; silent = true; };
+        "<A-`>A" = { action = "\"Á\""; silent = true; };
+        "<A-`>E" = { action = "\"É\""; silent = true; };
+        "<A-`>I" = { action = "\"Í\""; silent = true; };
+        "<A-`>O" = { action = "\"Ó\""; silent = true; };
+        "<A-`>U" = { action = "\"Ú\""; silent = true; };
+        "<A-i>a" = { action = "\"â\""; silent = true; };
+        "<A-i>e" = { action = "\"ê\""; silent = true; };
+        "<A-i>i" = { action = "\"î\""; silent = true; };
+        "<A-i>o" = { action = "\"ô\""; silent = true; };
+        "<A-i>u" = { action = "\"û\""; silent = true; };
+        "<A-i>A" = { action = "\"Â\""; silent = true; };
+        "<A-i>E" = { action = "\"Ê\""; silent = true; };
+        "<A-i>I" = { action = "\"Î\""; silent = true; };
+        "<A-i>O" = { action = "\"Ô\""; silent = true; };
+        "<A-i>U" = { action = "\"Û\""; silent = true; };
+        "<A-u>a" = { action = "\"ä\""; silent = true; };
+        "<A-u>e" = { action = "\"ë\""; silent = true; };
+        "<A-u>i" = { action = "\"ï\""; silent = true; };
+        "<A-u>o" = { action = "\"ö\""; silent = true; };
+        "<A-u>u" = { action = "\"ü\""; silent = true; };
+        "<A-u>A" = { action = "\"Ä\""; silent = true; };
+        "<A-u>E" = { action = "\"Ë\""; silent = true; };
+        "<A-u>I" = { action = "\"Ï\""; silent = true; };
+        "<A-u>O" = { action = "\"Ö\""; silent = true; };
+        "<A-u>U" = { action = "\"Ü\""; silent = true; };
       };
     };
     plugins = {
