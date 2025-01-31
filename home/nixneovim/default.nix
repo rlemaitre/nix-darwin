@@ -272,9 +272,6 @@ programs.nixneovim = {
           tailwind = true;
         };
       };
-      comment = {
-        enable = true;
-      };
       copilot = {
         enable = true;
       };
