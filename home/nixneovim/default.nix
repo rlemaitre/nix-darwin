@@ -201,6 +201,22 @@ programs.nixneovim = {
           action = "function() require('nvim-toggler').toggle() end";
           desc = "Toggle word";
         };
+        "<C-Right>" = {
+          action = "<C-w>l";
+          desc = "Go to right split";
+        };
+        "<C-Left>" = {
+          action = "<C-w>l";
+          desc = "Go to left split";
+        };
+        "<C-Up>" = {
+          action = "<C-w>k";
+          desc = "Go to up split";
+        };
+        "<C-Down>" = {
+          action = "<C-w>l";
+          desc = "Go to down split";
+        };
       };
       insert = {
         # Handle correctly accentuated letters
