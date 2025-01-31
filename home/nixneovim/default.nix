@@ -105,7 +105,7 @@ programs.nixneovim = {
         };
         "<leader>Tn" = {
           action = "\"<cmd>tabn<CR>\"";
-          desc = "Go to new tab";
+          desc = "Go to next tab";
         };
         "<leader>Tp" = {
           action = "\"<cmd>tabp<CR>\"";
