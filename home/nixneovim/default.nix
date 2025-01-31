@@ -149,6 +149,58 @@ programs.nixneovim = {
           action = "'<cmd>FloatermToggle<CR>'";
           desc = "Toggle terminal";
         };
+        # NerdCommenter
+        "<leader>/$" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'ToEOL')'";
+          desc = "Comment until end of line";
+        };
+      };
+      normalVisualOp = {
+        # NerdCommenter
+        "<leader>//" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Toggle')'";
+          desc = "Toggle comment";
+        };
+        "<leader>/c" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Comment')'";
+          desc = "Comment";
+        };
+        "<leader>/i" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Invert')'";
+          desc = "Invert comment";
+        };
+        "<leader>/m" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Minimal')'";
+          desc = "Minimal comment";
+        };
+        "<leader>/n" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Nested')'";
+          desc = "Nested comment";
+        };
+        "<leader>/y" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Yank')'";
+          desc = "Yank then comment";
+        };
+        "<leader>/u" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Uncomment')'";
+          desc = "Uncomment";
+        };
+        "<leader>/l" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'AlignLeft')'";
+          desc = "Left-aligned comment";
+        };
+        "<leader>/b" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'AlignBoth')'";
+          desc = "Left-and-right-aligned comment";
+        };
+        "<leader>s/" = {
+          action = "'<cmd>:call nerdcommenter#Comment('', 'Toggle')'";
+          desc = "Toggle comment";
+        };
+        "<leader>si" = {
+          action = "'require(\'nvim-toggler\').toggle'";
+          desc = "Toggle word";
+        };
       };
       insert = {
         # Handle correctly accentuated letters
@@ -255,6 +307,7 @@ programs.nixneovim = {
       nerdcommenter = {
         enable = true;
         defaultAlign = "left";
+        createDefaultMappings = 0;
         spaceDelims = 1;
       };
       nvim-autopairs = {
@@ -279,7 +332,6 @@ programs.nixneovim = {
           "<PageDown>" = "cmp.mapping.scroll_docs(4)";
           "<C-Space>" = "cmp.mapping.complete()";
           "<LeftMouse>" = "cmp.mapping.complete()";
-          "<Tab>" = "cmp.mapping.complete()";
           "<C-e>" = "cmp.mapping.abort()";
           "<Esc>" = "cmp.mapping.abort()";
           "<CR>" = "cmp.mapping.confirm({ select = false })";
@@ -441,11 +493,12 @@ programs.nixneovim = {
         enable = true;
         groups = {
           normal = {
-            "<leader>T" = "Tab Management";
-            "<leader>t" = "Terminal";
-            "<leader>w" = "Window Management";
+            "<leader>/" = "Comment line";
             "<leader>e" = "File Explorer";
-            "<leader>c" = "Comment line";
+            "<leader>s" = "Switch things";
+            "<leader>t" = "Terminal";
+            "<leader>T" = "Tab Management";
+            "<leader>w" = "Window Management";
           };
         };
       };
