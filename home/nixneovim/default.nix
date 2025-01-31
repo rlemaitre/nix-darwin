@@ -270,11 +270,18 @@ programs.nixneovim = {
         # };
         mapping = {
           "<C-k>" = "cmp.mapping.select_prev_item()";
+          "<Up>" = "cmp.mapping.select_prev_item()";
           "<C-j>" = "cmp.mapping.select_next_item()";
+          "<Down>" = "cmp.mapping.select_next_item()";
           "<C-b>" = "cmp.mapping.scroll_docs(-4)";
+          "<PageUp>" = "cmp.mapping.scroll_docs(-4)";
           "<C-f>" = "cmp.mapping.scroll_docs(4)";
+          "<PageDown>" = "cmp.mapping.scroll_docs(4)";
           "<C-Space>" = "cmp.mapping.complete()";
+          "<LeftMouse>" = "cmp.mapping.complete()";
+          "<Tab>" = "cmp.mapping.complete()";
           "<C-e>" = "cmp.mapping.abort()";
+          "<Esc>" = "cmp.mapping.abort()";
           "<CR>" = "cmp.mapping.confirm({ select = false })";
         };
         snippet = {
