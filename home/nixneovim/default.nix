@@ -315,6 +315,10 @@ programs.nixneovim = {
           char = "┊";
         };
       };
+      lsp-lines = {
+        enable = true;
+        onlyCurrentLine = false;
+      };
       lspconfig = {
         enable = true;
         # TODO: add lspconfig configuration
