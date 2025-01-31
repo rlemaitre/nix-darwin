@@ -1,4 +1,5 @@
-{ config, inputs, pkgs, lib, ... }:
+{ config, inputs, pkgs, lib, userConfig, ... }:
+
 
 {
 
@@ -6,17 +7,16 @@
 
   # import sub modules
   imports = [
-#    ./link-home-manager-installed-apps.nix
-    ./docker.nix
-#    ./gw.nix
-    ./gpg.nix
-    ./bat.nix
+    ./bat/default.nix
+    ./docker/default.nix
+    ./gpg/default.nix
+    ./nixneovim/default.nix
   ];
 
   # home manager needs this
   home = {
-    username = "raphael.lemaitre";
-    homeDirectory = "/Users/raphael.lemaitre";
+    username = "${userConfig.username}";
+    homeDirectory = "${userConfig.homeDirectory}";
     stateVersion = "23.11";
   };
 
@@ -34,7 +34,6 @@
     gnupg
     hexyl
     lazygit
-    neovim
     oh-my-posh
     pinentry_mac
     pistol
@@ -48,32 +47,32 @@
   # TODO hardware.keyboard.zsa.enable
 
   home.file = {
-    "~/.config/ghostty" = {
+    "${userConfig.homeDirectory}/.config/ghostty" = {
       enable = true;
       source = ./files/ghostty;
       recursive = true;
     };
-    "~/.config/nvim" = {
-      enable = true;
-      source = ./files/nvim;
-      recursive = true;
-    };
-    "~/.config/oh-my-posh" = {
+    # "${userConfig.homeDirectory}/.config/nvim" = {
+    #   enable = true;
+    #   source = ./files/nvim;
+    #   recursive = true;
+    # };
+    "${userConfig.homeDirectory}/.config/oh-my-posh" = {
       enable = true;
       source = ./files/oh-my-posh;
       recursive = true;
     };
-    "~/.config/pistol" = {
+    "${userConfig.homeDirectory}/.config/pistol" = {
       enable = true;
       source = ./files/pistol;
       recursive = true;
     };
-    "~/.config/zed" = {
+    "${userConfig.homeDirectory}/.config/zed" = {
       enable = true;
       source = ./files/zed;
       recursive = true;
     };
-    "~/.config/zsh" = {
+    "${userConfig.homeDirectory}/.config/zsh" = {
       enable = true;
       source = ./files/zsh;
       recursive = true;
