@@ -247,19 +247,6 @@ programs.nixneovim = {
       };
     };
     plugins = {
-      barbar = {
-        enable = true;
-        autoHide = false;
-        clickable = true;
-        closable = true;
-        tabpages = true;
-        extraConfig = {
-          focus_on_close = "previous";
-          sidebar_filetypes = {
-            NvimTree = true;
-          };
-        };
-      };
       bufferline = {
         enable = true;
         separatorStyle = "slant";
