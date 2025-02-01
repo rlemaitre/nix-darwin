@@ -206,6 +206,26 @@
           action = "\"<cmd>:Lspsaga rename<CR>\"";
           desc = "Rename symbol";
         };
+        "<leader>gf" = {
+          action = "\"<cmd>:Neogit kind=float<CR>\"";
+          desc = "Open Neogit";
+        };
+        "<leader>gt" = {
+          action = "\"<cmd>:Neogit kind=tab<CR>\"";
+          desc = "Open Neogit in a new tab";
+        };
+        "<leader>gh" = {
+          action = "\"<cmd>:Neogit kind=split<CR>\"";
+          desc = "Open Neogit in an horizontal split";
+        };
+        "<leader>gv" = {
+          action = "\"<cmd>:Neogit kind=vsplit<CR>\"";
+          desc = "Open Neogit in an vertical split";
+        };
+        "<leader>gc" = {
+          action = "\"<cmd>:Neogit commit<CR>\"";
+          desc = "Commit changes";
+        };
       };
       normalVisualOp = {
         # NerdCommenter
@@ -538,6 +558,10 @@
       markdown-preview = {
         enable = true;
       };
+      neogit = {
+        enable = true;
+        kind = "floating";
+      };
       nerdcommenter = {
         enable = true;
         defaultAlign = "left";
@@ -735,6 +759,7 @@
             "<leader>ch" = "Call Hierarchy";
             "<leader>cp" = "Peek definition";
             "<leader>e" = "File Explorer";
+            "<leader>g" = "Git";
             "<leader>s" = "Switch things";
             "<leader>t" = "Terminal";
             "<leader>T" = "Tab Management";
