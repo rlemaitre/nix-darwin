@@ -1,7 +1,4 @@
-{ config, inputs, pkgs, lib, userConfig, ... }:
-
-
-{
+{ pkgs, userConfig, ... }: {
 
   # moar https://github.com/yuanw/nix-home/blob/main/modules/macintosh.nix
 
@@ -11,6 +8,7 @@
     ./docker/default.nix
     ./eza/default.nix
     ./fd/default.nix
+    ./fzf/default.nix
     ./gpg/default.nix
     ./nixneovim/default.nix
   ];
@@ -19,7 +17,7 @@
   home = {
     username = "${userConfig.username}";
     homeDirectory = "${userConfig.homeDirectory}";
-    stateVersion = "23.11";
+    stateVersion = "24.11";
   };
 
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/os-specific/darwin/
@@ -27,7 +25,6 @@
     chafa
     coreutils
     delta
-    fzf
     fzf-git-sh
     gh
     git
@@ -43,20 +40,12 @@
     viu
     zoxide
   ];
-
-  # TODO hardware.keyboard.zsa.enable
-
   home.file = {
     "${userConfig.homeDirectory}/.config/ghostty" = {
       enable = true;
       source = ./files/ghostty;
       recursive = true;
     };
-    # "${userConfig.homeDirectory}/.config/nvim" = {
-    #   enable = true;
-    #   source = ./files/nvim;
-    #   recursive = true;
-    # };
     "${userConfig.homeDirectory}/.config/oh-my-posh" = {
       enable = true;
       source = ./files/oh-my-posh;
