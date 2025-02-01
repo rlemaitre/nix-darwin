@@ -1,5 +1,5 @@
-{ config, lib, pkgs, ... }:{
-programs.nixneovim = {
+{
+  programs.nixneovim = {
     enable = true;
     globals = {
       mapleader = " ";
@@ -153,6 +153,58 @@ programs.nixneovim = {
         "<leader>/$" = {
           action = "\"<cmd>:call nerdcommenter#Comment('', 'ToEOL')<CR>\"";
           desc = "Comment until end of line";
+        };
+        "<leader>ca" = {
+          action = "\"<cmd>:Lspsaga code_action<CR>\"";
+          desc = "Show code actions";
+        };
+        "<leader>chi" = {
+          action = "\"<cmd:Lspsaga incoming_calls<CR>\"";
+          desc = "Show incoming calls";
+        };
+        "<leader>cho" = {
+          action = "\"<cmd:Lspsaga outgoing_calls<CR>\"";
+          desc = "Show outgoing calls";
+        };
+        "<leader>cpd" = {
+          action = "\"<cmd:Lspsaga peek_definition<CR>\"";
+          desc = "Peek definition";
+        };
+        "<leader>cpt" = {
+          action = "\"<cmd:Lspsaga peek_type_definition<CR>\"";
+          desc = "Peek type definition";
+        };
+        "<leader>cgd" = {
+          action = "\"<cmd:Lspsaga goto_definition<CR>\"";
+          desc = "Go to definition";
+        };
+        "<leader>cgt" = {
+          action = "\"<cmd:Lspsaga goto_type_definition<CR>\"";
+          desc = "Go to type definition";
+        };
+        "<leader>cdp" = {
+          action = "\"<cmd:Lspsaga diagnostic_jump_prev<CR>\"";
+          desc = "Jump to previous diagnostic";
+        };
+        "<leader>cdn" = {
+          action = "\"<cmd:Lspsaga diagnostic_jump_next<CR>\"";
+          desc = "Jump to next diagnostic";
+        };
+        "<leader>cf" = {
+          action = "\"<cmd>:Lspsaga finder<CR>\"";
+          desc = "Show LP finder";
+        };
+        "<leader>cj" = {
+          action = "\"<cmd>:Lspsaga hover_doc<CR>\"";
+          desc = "Show hover documentation";
+        };
+        "<leader>co" = {
+          action = "\"<cmd>:Lspsaga outline<CR>\"";
+          desc = "Show code outline";
+        };
+        "<leader>cr" = {
+          action = "\"<cmd>:Lspsaga rename<CR>\"";
+          desc = "Rename symbol";
         };
       };
       normalVisualOp = {
@@ -321,7 +373,6 @@ programs.nixneovim = {
       };
       lspconfig = {
         enable = true;
-        # TODO: add lspconfig configuration
         servers = {
           bashls = {
             enable = true;
@@ -385,6 +436,101 @@ programs.nixneovim = {
         enable = true;
         mode = "symbol_text";
       };
+      lspsaga = {
+        enable = true;
+        beacon = {
+          enable = true;
+        };
+        callhierarchy = {
+          keys = {
+            jump = "o";
+            quit = "q";
+            split = "i";
+            tabe = "t";
+            vsplit = "v";
+          };
+          showDetail = true;
+        };
+        codeAction = {
+          extendGitsigns = true;
+          keys = {
+            exec = "<CR>";
+            quit = "q";
+          };
+          numShortcut = true;
+        };
+        definition = {
+          edit = "<C-c>o";
+          quit = "q";
+          split ="<C-c>i";
+          vsplit = "<C-c>v";
+        };
+        diagnostic = {
+          jumpNumShortcut = true;
+          keys = {
+            execAction = "o";
+            expandOrJump = "<CR>";
+            quit = "q";
+            quitInShow = ["q" "<ESC>"];
+          };
+          showCodeAction = true;
+          showSource = true;
+        };
+        finder = {
+          keys = {
+            closeInPreview = "<ESC>";
+            expandOrJump = "o";
+            jumpTo = "p";
+            quit = ["q" "<ESC>"];
+            split = "i";
+            tabe = "t";
+            tabnew = "r";
+            vsplit = "v";
+          };
+        };
+        hover = {
+          openBrowser = "!chrome";
+          openLink = "gx";
+        };
+        lightbulb = {
+          enable = true;
+          enableInInsert = true;
+          sign = true;
+          virtualText = true;
+        };
+        outline = {
+          autoClose = true;
+          autoPreview = true;
+          autoRefresh = true;
+          autoResize = false;
+          closeAfterJump = false;
+          keys = {
+            expandOrJump = "o";
+            quit = "q";
+          };
+          winPosition = "right";
+        };
+        preview = {
+          linesAbove = 0;
+          linesBelow = 10;
+        };
+        rename = {
+          exec = "<CR>";
+          inSelect = true;
+          quit = "<C-c>";
+        };
+        requestTimeout = 2000;
+        scrollPreview = {
+          scrollDown = "<C-f>";
+          scrollUp = "<C-b>";
+        };
+        symbolInWinbar = {
+          enable = true;
+          colorMode = true;
+          separator = " › ";
+          showFile = true;
+        };
+      };
       lualine = {
         enable = true;
         theme = "nord";
@@ -406,9 +552,9 @@ programs.nixneovim = {
         completion = {
           completeopt = "menu,menuone,preview,noselect";
         };
-        # formatting = {
-        #   format = "require(\"lspkind\").cmp_format(maxwidth = 50, ellipsis_char = \"...\")";
-        # };
+        formatting = {
+          format = "require('lspkind').cmp_format({mode = 'symbol', maxwidth = { menu = 50, abbr = 50, }, ellipsis_char = '...', show_labelDetails = true,})";
+        };
         mapping = {
           "<C-k>" = "cmp.mapping.select_prev_item()";
           "<Up>" = "cmp.mapping.select_prev_item()";
@@ -458,6 +604,7 @@ programs.nixneovim = {
       };
       nvim-toggler = {
         enable = true;
+        removeDefaultKeybinds = true;
       };
       nvim-tree = {
         enable = true;
@@ -582,6 +729,11 @@ programs.nixneovim = {
         groups = {
           normal = {
             "<leader>/" = "Comment line";
+            "<leader>c" = "Code actions";
+            "<leader>cd" = "Diagnostics";
+            "<leader>cg" = "Go to definition";
+            "<leader>ch" = "Call Hierarchy";
+            "<leader>cp" = "Peek definition";
             "<leader>e" = "File Explorer";
             "<leader>s" = "Switch things";
             "<leader>t" = "Terminal";
