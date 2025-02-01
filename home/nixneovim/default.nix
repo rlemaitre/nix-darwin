@@ -68,227 +68,67 @@
       normal = {
         "x" = "'\"_x'";
         # Increment/Decrement numbers
-        "<leader>+" = {
-          action = "\"<C-a>\"";
-          desc = "Increment number";
-        };
-        "<leader>-" = {
-          action = "\"<C-x>\"";
-          desc = "Decrement number";
-        };
+        "<leader>+" = { action = "\"<C-a>\""; desc = "Increment number"; };
+        "<leader>-" = { action = "\"<C-x>\""; desc = "Decrement number"; };
         # Window management
-        "<leader>wv" = {
-          action = "\"<C-w>v\"";
-          desc = "Split window vertically";
-        };
-        "<leader>wh" = {
-          action = "\"<C-w>s\"";
-          desc = "Split window horizontally";
-        };
-        "<leader>we" = {
-          action = "\"<C-w>=\"";
-          desc = "Make splits equal size";
-
-        };
-        "<leader>wx" = {
-          action = "\"<cmd>close<CR>\"";
-          desc = "Close current split";
-        };
+        "<leader>wv" = { action = "\"<C-w>v\""; desc = "Split window vertically"; };
+        "<leader>wh" = { action = "\"<C-w>s\""; desc = "Split window horizontally"; };
+        "<leader>we" = { action = "\"<C-w>=\""; desc = "Make splits equal size"; };
+        "<leader>wx" = { action = "\"<cmd>close<CR>\""; desc = "Close current split"; };
         # Tab Management
-        "<leader>To" = {
-          action = "\"<cmd>tabnew<CR>\"";
-          desc = "Open new tab";
-        };
-        "<leader>Tx" = {
-          action = "\"<cmd>tabclose<CR>\"";
-          desc = "Close current tab";
-        };
-        "<leader>Tn" = {
-          action = "\"<cmd>tabn<CR>\"";
-          desc = "Go to next tab";
-        };
-        "<leader>Tp" = {
-          action = "\"<cmd>tabp<CR>\"";
-          desc = "Go to previous tab";
-        };
-        "<leader>Tf" = {
-          action = "\"<cmd>tabnew %<CR>\"";
-          desc = "Open current buffer in a new tab";
-        };
+        "<leader>To" = { action = "\"<cmd>tabnew<CR>\""; desc = "Open new tab"; };
+        "<leader>Tx" = { action = "\"<cmd>tabclose<CR>\""; desc = "Close current tab"; };
+        "<leader>Tn" = { action = "\"<cmd>tabn<CR>\""; desc = "Go to next tab"; };
+        "<leader>Tp" = { action = "\"<cmd>tabp<CR>\""; desc = "Go to previous tab"; };
+        "<leader>Tf" = { action = "\"<cmd>tabnew %<CR>\""; desc = "Open current buffer in a new tab"; };
         # nvim-tree
-        "<leader>ee" = {
-          action = "\"<cmd>NvimTreeToggle<CR>\"";
-          desc = "Toggle file explorer";
-        };
-        "<leader>ef" = {
-          action = "\"<cmd>NvimTreeFindFileToggle<CR>\"";
-          desc = "Toggle file explorer on current file";
-        };
-        "<leader>ec" = {
-          action = "\"<cmd>NvimTreeCollapse<CR>\"";
-          desc = "Collapse file explorer";
-        };
-        "<leader>er" = {
-          action = "\"<cmd>NvimTreeRefresh<CR>\"";
-          desc = "Refresh file explorer";
-        };
+        "<leader>ee" = { action = "\"<cmd>NvimTreeToggle<CR>\""; desc = "Toggle file explorer"; };
+        "<leader>ef" = { action = "\"<cmd>NvimTreeFindFileToggle<CR>\""; desc = "Toggle file explorer on current file"; };
+        "<leader>ec" = { action = "\"<cmd>NvimTreeCollapse<CR>\""; desc = "Collapse file explorer"; };
+        "<leader>er" = { action = "\"<cmd>NvimTreeRefresh<CR>\""; desc = "Refresh file explorer"; };
         # Terminal
-        "<leader>tn" = {
-          action = "\"<cmd>FloatermNew<CR>\"";
-          desc = "Open new terminal";
-        };
-        "<leader>tj" = {
-          action = "\"<cmd>FloatermPrev<CR>\"";
-          desc = "Open previous terminal";
-        };
-        "<leader>tk" = {
-          action = "\"<cmd>FloatermNext<CR>\"";
-          desc = "Open next terminal";
-        };
-        "<leader>tt" = {
-          action = "\"<cmd>FloatermToggle<CR>\"";
-          desc = "Toggle terminal";
-        };
+        "<leader>tn" = { action = "\"<cmd>FloatermNew<CR>\""; desc = "Open new terminal"; };
+        "<leader>tj" = { action = "\"<cmd>FloatermPrev<CR>\""; desc = "Open previous terminal"; };
+        "<leader>tk" = { action = "\"<cmd>FloatermNext<CR>\""; desc = "Open next terminal"; };
+        "<leader>tt" = { action = "\"<cmd>FloatermToggle<CR>\""; desc = "Toggle terminal"; };
         # NerdCommenter
-        "<leader>/$" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'ToEOL')<CR>\"";
-          desc = "Comment until end of line";
-        };
-        "<leader>ca" = {
-          action = "\"<cmd>:Lspsaga code_action<CR>\"";
-          desc = "Show code actions";
-        };
-        "<leader>chi" = {
-          action = "\"<cmd:Lspsaga incoming_calls<CR>\"";
-          desc = "Show incoming calls";
-        };
-        "<leader>cho" = {
-          action = "\"<cmd:Lspsaga outgoing_calls<CR>\"";
-          desc = "Show outgoing calls";
-        };
-        "<leader>cpd" = {
-          action = "\"<cmd:Lspsaga peek_definition<CR>\"";
-          desc = "Peek definition";
-        };
-        "<leader>cpt" = {
-          action = "\"<cmd:Lspsaga peek_type_definition<CR>\"";
-          desc = "Peek type definition";
-        };
-        "<leader>cgd" = {
-          action = "\"<cmd:Lspsaga goto_definition<CR>\"";
-          desc = "Go to definition";
-        };
-        "<leader>cgt" = {
-          action = "\"<cmd:Lspsaga goto_type_definition<CR>\"";
-          desc = "Go to type definition";
-        };
-        "<leader>cdp" = {
-          action = "\"<cmd:Lspsaga diagnostic_jump_prev<CR>\"";
-          desc = "Jump to previous diagnostic";
-        };
-        "<leader>cdn" = {
-          action = "\"<cmd:Lspsaga diagnostic_jump_next<CR>\"";
-          desc = "Jump to next diagnostic";
-        };
-        "<leader>cf" = {
-          action = "\"<cmd>:Lspsaga finder<CR>\"";
-          desc = "Show LP finder";
-        };
-        "<leader>cj" = {
-          action = "\"<cmd>:Lspsaga hover_doc<CR>\"";
-          desc = "Show hover documentation";
-        };
-        "<leader>co" = {
-          action = "\"<cmd>:Lspsaga outline<CR>\"";
-          desc = "Show code outline";
-        };
-        "<leader>cr" = {
-          action = "\"<cmd>:Lspsaga rename<CR>\"";
-          desc = "Rename symbol";
-        };
-        "<leader>gf" = {
-          action = "\"<cmd>:Neogit kind=float<CR>\"";
-          desc = "Open Neogit";
-        };
-        "<leader>gt" = {
-          action = "\"<cmd>:Neogit kind=tab<CR>\"";
-          desc = "Open Neogit in a new tab";
-        };
-        "<leader>gh" = {
-          action = "\"<cmd>:Neogit kind=split<CR>\"";
-          desc = "Open Neogit in an horizontal split";
-        };
-        "<leader>gv" = {
-          action = "\"<cmd>:Neogit kind=vsplit<CR>\"";
-          desc = "Open Neogit in an vertical split";
-        };
-        "<leader>gc" = {
-          action = "\"<cmd>:Neogit commit<CR>\"";
-          desc = "Commit changes";
-        };
+        "<leader>/$" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'ToEOL')<CR>\""; desc = "Comment until end of line"; };
+        # LSPSaga
+        "<leader>ca" = { action = "\"<cmd>:Lspsaga code_action<CR>\""; desc = "Show code actions"; };
+        "<leader>chi" = { action = "\"<cmd:Lspsaga incoming_calls<CR>\""; desc = "Show incoming calls"; };
+        "<leader>cho" = { action = "\"<cmd:Lspsaga outgoing_calls<CR>\""; desc = "Show outgoing calls"; };
+        "<leader>cpd" = { action = "\"<cmd:Lspsaga peek_definition<CR>\""; desc = "Peek definition"; };
+        "<leader>cpt" = { action = "\"<cmd:Lspsaga peek_type_definition<CR>\""; desc = "Peek type definition"; };
+        "<leader>cgd" = { action = "\"<cmd:Lspsaga goto_definition<CR>\""; desc = "Go to definition"; };
+        "<leader>cgt" = { action = "\"<cmd:Lspsaga goto_type_definition<CR>\""; desc = "Go to type definition"; };
+        "<leader>cdp" = { action = "\"<cmd:Lspsaga diagnostic_jump_prev<CR>\""; desc = "Jump to previous diagnostic"; };
+        "<leader>cdn" = { action = "\"<cmd:Lspsaga diagnostic_jump_next<CR>\""; desc = "Jump to next diagnostic"; };
+        "<leader>cf" = { action = "\"<cmd>:Lspsaga finder<CR>\""; desc = "Show LP finder"; };
+        "<leader>cj" = { action = "\"<cmd>:Lspsaga hover_doc<CR>\""; desc = "Show hover documentation"; };
+        "<leader>co" = { action = "\"<cmd>:Lspsaga outline<CR>\""; desc = "Show code outline"; };
+        "<leader>cr" = { action = "\"<cmd>:Lspsaga rename<CR>\""; desc = "Rename symbol"; };
+        # Neogit
+        "<leader>GG" = { action = "\"<cmd>:Neogit<CR>\""; desc = "Open Neogit"; };
+        "<leader>Gc" = { action = "\"<cmd>:Neogit commit<CR>\""; desc = "Commit changes"; };
       };
       normalVisualOp = {
         # NerdCommenter
-        "<leader>//" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Toggle')<CR>\"";
-          desc = "Toggle comment";
-        };
-        "<leader>/c" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Comment')<CR>\"";
-          desc = "Comment";
-        };
-        "<leader>/i" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Invert')<CR>\"";
-          desc = "Invert comment";
-        };
-        "<leader>/m" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Minimal')<CR>\"";
-          desc = "Minimal comment";
-        };
-        "<leader>/n" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Nested')<CR>\"";
-          desc = "Nested comment";
-        };
-        "<leader>/y" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Yank')<CR>\"";
-          desc = "Yank then comment";
-        };
-        "<leader>/u" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Uncomment')<CR>\"";
-          desc = "Uncomment";
-        };
-        "<leader>/l" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'AlignLeft')<CR>\"";
-          desc = "Left-aligned comment";
-        };
-        "<leader>/b" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'AlignBoth')<CR>\"";
-          desc = "Left-and-right-aligned comment";
-        };
-        "<leader>s/" = {
-          action = "\"<cmd>:call nerdcommenter#Comment('', 'Toggle')<CR>\"";
-          desc = "Toggle comment";
-        };
-        "<leader>si" = {
-          action = "function() require('nvim-toggler').toggle() end";
-          desc = "Toggle word";
-        };
-        "<C-Right>" = {
-          action = "\"<C-w>l\"";
-          desc = "Go to right split";
-        };
-        "<C-Left>" = {
-          action = "\"<C-w>l\"";
-          desc = "Go to left split";
-        };
-        "<C-Up>" = {
-          action = "\"<C-w>k\"";
-          desc = "Go to up split";
-        };
-        "<C-Down>" = {
-          action = "\"<C-w>l\"";
-          desc = "Go to down split";
-        };
+        "<leader>//" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Toggle')<CR>\""; desc = "Toggle comment"; };
+        "<leader>/c" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Comment')<CR>\""; desc = "Comment"; };
+        "<leader>/i" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Invert')<CR>\""; desc = "Invert comment"; };
+        "<leader>/m" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Minimal')<CR>\""; desc = "Minimal comment"; };
+        "<leader>/n" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Nested')<CR>\""; desc = "Nested comment"; };
+        "<leader>/y" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Yank')<CR>\""; desc = "Yank then comment"; };
+        "<leader>/u" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Uncomment')<CR>\""; desc = "Uncomment"; };
+        "<leader>/l" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'AlignLeft')<CR>\""; desc = "Left-aligned comment"; };
+        "<leader>/b" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'AlignBoth')<CR>\""; desc = "Left-and-right-aligned comment"; };
+        "<leader>s/" = { action = "\"<cmd>:call nerdcommenter#Comment('', 'Toggle')<CR>\"";desc = "Toggle comment"; };
+        "<leader>si" = { action = "function() require('nvim-toggler').toggle() end"; desc = "Toggle word"; };
+        # Split navigation
+        "<C-Right>" = { action = "\"<C-w>l\""; desc = "Go to right split"; };
+        "<C-Left>" = { action = "\"<C-w>h\""; desc = "Go to left split"; };
+        "<C-Up>" = { action = "\"<C-w>k\""; desc = "Go to up split"; };
+        "<C-Down>" = { action = "\"<C-w>j\"";desc = "Go to down split";};
       };
       insert = {
         # Handle correctly accentuated letters
@@ -366,12 +206,8 @@
         keymap = "<leader>/f";
         multiline_keymap = "<leader>/m";
       };
-      copilot = {
-        enable = true;
-      };
-      diffview = {
-        enable  = true;
-      };
+      copilot.enable = true;
+      diffview.enable = true;
       floaterm = {
         enable = true;
         shell = "zsh";
@@ -383,9 +219,7 @@
       };
       indent-blankline = {
         enable = true;
-        indent = {
-          char = "┊";
-        };
+        indent.char = "┊";
       };
       lsp-lines = {
         enable = true;
@@ -394,62 +228,24 @@
       lspconfig = {
         enable = true;
         servers = {
-          bashls = {
-            enable = true;
-          };
-          clangd = {
-            enable = true;
-          };
-          cssls = {
-            enable = true;
-          };
-          eslint = {
-            enable = true;
-          };
-          gopls = {
-            enable = true;
-          };
-          hls = {
-            enable = true;
-          };
-          html = {
-            enable = true;
-          };
-          jsonls = {
-            enable = true;
-          };
-          kotlin-language-server = {
-            enable = true;
-          };
-          lua-language-server = {
-            enable = true;
-          };
-          nil = {
-            # Nix Language Server
-            enable = true;
-          };
-          ocamllsp = {
-            enable = true;
-          };
-          pyright = {
-            enable = true;
-          };
-          rust-analyzer = {
-            enable = true;
-          };
-          taplo = {
-            # TOML Language Server
-            enable = true;
-          };
-          terraform-ls = {
-            enable = true;
-          };
-          typescript-language-server = {
-            enable = true;
-          };
-          vuels = {
-            enable = true;
-          };
+          bashls.enable = true;
+          clangd.enable = true;
+          cssls.enable = true;
+          eslint.enable = true;
+          gopls.enable = true;
+          hls.enable = true;
+          html.enable = true;
+          jsonls.enable = true;
+          kotlin-language-server.enable = true;
+          lua-language-server.enable = true;
+          nil.enable = true; # Nix Language Server
+          ocamllsp.enable = true;
+          pyright.enable = true;
+          rust-analyzer.enable = true;
+          taplo.enable = true;# TOML Language Server
+          terraform-ls.enable = true;
+          typescript-language-server.enable = true;
+          vuels.enable = true;
         };
       };
       lspkind = {
@@ -458,9 +254,7 @@
       };
       lspsaga = {
         enable = true;
-        beacon = {
-          enable = true;
-        };
+        beacon.enable = true;
         callhierarchy = {
           keys = {
             jump = "o";
@@ -555,12 +349,11 @@
         enable = true;
         theme = "nord";
       };
-      markdown-preview = {
-        enable = true;
-      };
+      markdown-preview.enable = true;
       neogit = {
         enable = true;
         kind = "floating";
+        commitPopup.kind = "floating";
       };
       nerdcommenter = {
         enable = true;
@@ -568,16 +361,11 @@
         createDefaultMappings = 0;
         spaceDelims = 1;
       };
-      nvim-autopairs = {
-        enable = true;
-      };
+      nvim-autopairs.enable = true;
       nvim-cmp = {
         enable = true;
         completion = {
           completeopt = "menu,menuone,preview,noselect";
-        };
-        formatting = {
-          format = "require('lspkind').cmp_format({mode = 'symbol', maxwidth = { menu = 50, abbr = 50, }, ellipsis_char = '...', show_labelDetails = true,})";
         };
         mapping = {
           "<C-k>" = "cmp.mapping.select_prev_item()";
@@ -594,36 +382,16 @@
           "<Esc>" = "cmp.mapping.abort()";
           "<CR>" = "cmp.mapping.confirm({ select = false })";
         };
-        snippet = {
-          luasnip = {
-            enable = true;
-          };
-        };
+        snippet.luasnip.enable = true;
         sources = {
-          buffer = {
-            enable = true;
-          };
-          conventionalcommits = {
-            enable = true;
-          };
-          copilot = {
-            enable = true;
-          };
-          emoji = {
-            enable = true;
-          };
-          git = {
-            enable = true;
-          };
-          luasnip = {
-            enable = true;
-          };
-          nvim_lsp = {
-            enable = true;
-          };
-          path = {
-            enable = true;
-          };
+          buffer.enable = true;
+          conventionalcommits.enable = true;
+          copilot.enable = true;
+          emoji.enable = true;
+          git.enable = true;
+          luasnip.enable = true;
+          nvim_lsp.enable = true;
+          path.enable = true;
         };
       };
       nvim-toggler = {
@@ -642,7 +410,7 @@
         };
         openOnTab = true;
         syncRootWithCwd = true;
-        updateFocusedFile = { enable = true; };
+        updateFocusedFile.enable = true;
         git = {
           enable = true;
           ignore = false;
@@ -656,7 +424,7 @@
           renderer = {
             full_name = true;
             group_empty = true;
-            indent_markers = { enable = true; };
+            indent_markers.enable = true;
             special_files = [
               "Cargo.toml"
               "build.sbt"
@@ -704,15 +472,11 @@
               };
             };
           };
-
         };
       };
       project-nvim = {
         enable = true;
-        detectionMethods = [
-          "lsp"
-          "pattern"
-        ];
+        detectionMethods = ["lsp" "pattern"];
         patterns = [
 			    ".git"
 			    "package.json"
@@ -730,24 +494,22 @@
 			    "build.sc"
         ];
       };
-      surround = {
-        enable = true;
-      };
+      surround.enable = true;
       telescope = {
         enable = true;
         extensions = {
-          manix = { enable = true; };
-          mediaFiles = { enable = true; };
+          manix.enable = true;
+          mediaFiles.enable = true;
         };
       };
-      todo-comments = { enable = true; };
+      todo-comments.enable = true;
       treesitter = {
         enable = true;
         indent = true;
         installAllGrammars = true;
       };
-      treesitter-context = { enable = true; };
-      trouble = { enable = true; };
+      treesitter-context.enable = true;
+      trouble.enable = true;
       which-key = {
         enable = true;
         groups = {
@@ -759,7 +521,7 @@
             "<leader>ch" = "Call Hierarchy";
             "<leader>cp" = "Peek definition";
             "<leader>e" = "File Explorer";
-            "<leader>g" = "Git";
+            "<leader>G" = "Git";
             "<leader>s" = "Switch things";
             "<leader>t" = "Terminal";
             "<leader>T" = "Tab Management";

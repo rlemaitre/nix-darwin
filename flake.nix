@@ -28,9 +28,6 @@
         username = "raphael.lemaitre";
         homeDirectory = "/Users/raphael.lemaitre";
       };
-      inherit (self) outputs;
-      inherit (nixpkgs) lib;
-      system = "aarch64-darwin"; # apple silicon
     in
     {
       darwinConfigurations."LMFR0150" = darwin.lib.darwinSystem {
