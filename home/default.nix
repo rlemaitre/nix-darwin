@@ -9,6 +9,7 @@
     ./eza/default.nix
     ./fd/default.nix
     ./fzf/default.nix
+    ./gh/default.nix
     ./gpg/default.nix
     ./nixneovim/default.nix
   ];
@@ -26,7 +27,6 @@
     coreutils
     delta
     fzf-git-sh
-    gh
     git
     gnupg
     hexyl
