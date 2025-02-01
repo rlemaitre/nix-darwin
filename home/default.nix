@@ -10,6 +10,7 @@
     ./bat/default.nix
     ./docker/default.nix
     ./eza/default.nix
+    ./fd/default.nix
     ./gpg/default.nix
     ./nixneovim/default.nix
   ];
@@ -26,7 +27,6 @@
     chafa
     coreutils
     delta
-    fd # modern replacement for `find`
     fzf
     fzf-git-sh
     gh
