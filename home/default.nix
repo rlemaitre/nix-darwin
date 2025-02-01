@@ -9,6 +9,7 @@
   imports = [
     ./bat/default.nix
     ./docker/default.nix
+    ./eza/default.nix
     ./gpg/default.nix
     ./nixneovim/default.nix
   ];
@@ -24,7 +25,6 @@
   home.packages = with pkgs; [
     chafa
     coreutils
-    eza # modern replacement for `ls`
     delta
     fd # modern replacement for `find`
     fzf
