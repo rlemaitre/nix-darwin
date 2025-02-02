@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: {
+{ pkgs, userConfig, ... }: {
 
   programs.gpg = {
     enable = true;
@@ -22,7 +22,7 @@
     allow-preset-passphrase
 
     # mac
-    pinentry-program "${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac";
+    pinentry-program "${userConfig.homeDirectory}/.gnupg/pinentry-ide.sh"
 
     enable-ssh-support
 

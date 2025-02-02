@@ -7,13 +7,13 @@
         "https://github.com"
         "https://gist.github.com"
       ];
-      settings = {
-        aliases = {
-          co = "pr checkout";
-          pv = "pr view";
-        };
-        protocol = "ssh";
+    };
+    settings = {
+      aliases = {
+        co = "pr checkout";
+        pv = "pr view";
       };
+      protocol = "ssh";
     };
   };
   programs.gh-dash = {

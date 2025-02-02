@@ -8,6 +8,7 @@
     ./docker/default.nix
     ./eza/default.nix
     ./fd/default.nix
+    ./files/default.nix
     ./fzf/default.nix
     ./gh/default.nix
     ./gpg/default.nix
@@ -40,31 +41,4 @@
     viu
     zoxide
   ];
-  home.file = {
-    "${userConfig.homeDirectory}/.config/ghostty" = {
-      enable = true;
-      source = ./files/ghostty;
-      recursive = true;
-    };
-    "${userConfig.homeDirectory}/.config/oh-my-posh" = {
-      enable = true;
-      source = ./files/oh-my-posh;
-      recursive = true;
-    };
-    "${userConfig.homeDirectory}/.config/pistol" = {
-      enable = true;
-      source = ./files/pistol;
-      recursive = true;
-    };
-    "${userConfig.homeDirectory}/.config/zed" = {
-      enable = true;
-      source = ./files/zed;
-      recursive = true;
-    };
-    "${userConfig.homeDirectory}/.config/zsh" = {
-      enable = true;
-      source = ./files/zsh;
-      recursive = true;
-    };
-  };
 }
