@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ pkgs, ... }: {
 
   environment.extraInit = ''
     export PATH=$HOME/bin:$PATH
@@ -7,7 +7,9 @@
   # install packages from nix's official package repository.
   environment.systemPackages = with pkgs; [
     git
+    alejandra
     nil # nix language server
+    nixd
     nixfmt # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-fmt#examples
   ];
 
@@ -70,7 +72,6 @@
       "shottr"                      # Screenshot app
       "slack"                       # Slack
       "the-unarchiver"              # Unarchiver
-      "zed"                         # Text editor
     ];
 
     # mac app store

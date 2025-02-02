@@ -28,10 +28,11 @@
         username = "raphael.lemaitre";
         homeDirectory = "/Users/raphael.lemaitre";
       };
+      system = "aarch64-darwin";  # apple silicon
     in
     {
       darwinConfigurations."LMFR0150" = darwin.lib.darwinSystem {
-        system = "aarch64-darwin"; # apple silicon
+        inherit system;
         specialArgs = { inherit inputs; };
         modules = [
           {

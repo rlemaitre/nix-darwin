@@ -13,6 +13,7 @@
     ./gh/default.nix
     ./gpg/default.nix
     ./nixneovim/default.nix
+    ./zed-editor/default.nix
   ];
 
   # home manager needs this
