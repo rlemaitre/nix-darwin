@@ -1,5 +1,8 @@
-{ pkgs, userConfig, ... }: {
-
+{
+  pkgs,
+  userConfig,
+  ...
+}: {
   # moar https://github.com/yuanw/nix-home/blob/main/modules/macintosh.nix
 
   # import sub modules
@@ -12,6 +15,8 @@
     ./fzf/default.nix
     ./gh/default.nix
     ./gpg/default.nix
+    ./lazygit/default.nix
+    ./mise/default.nix
     ./nixneovim/default.nix
     ./zed-editor/default.nix
   ];

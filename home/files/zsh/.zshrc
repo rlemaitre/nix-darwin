@@ -78,3 +78,4 @@ source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/env.zsh"
 fpath=("/Users/raphael.lemaitre/Library/Application Support/ScalaCli/completions/zsh" $fpath)
 compinit
 # <<< scala-cli completions <<<
+eval "$(/etc/profiles/per-user/raphael.lemaitre/bin/mise activate zsh)"
