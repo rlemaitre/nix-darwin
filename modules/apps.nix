@@ -4,6 +4,7 @@
   '';
 
   nixpkgs.config.allowUnfree = true;
+
   # install packages from nix's official package repository.
   environment.systemPackages = with pkgs; [
     alejandra
@@ -12,10 +13,12 @@
     inkscape # Vector graphics editor
     jetbrains.datagrip
     jetbrains.idea-ultimate
+    mos
     nil # nix language server
     nixd
     nixfmt # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-fmt#examples
     slack
+    pkgs.unstable.usage
   ];
 
   # To make this work, homebrew need to be installed manually, see
@@ -37,7 +40,9 @@
 
     # brew install
     brews = [
+      "mise"
       "pinentry-mac"
+      "usage"
     ];
 
     # brew install --cask

@@ -1,24 +1,23 @@
 {
-  description = "Nix for macOS configuration";
+  description = "rlemaitre's system configuration";
 
   # format https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html#examples
   inputs = {
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
     darwin = {
-      url = "github:lnl7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+      url = "github:lnl7/nix-darwin/nix-darwin-24.11";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     mkAlias = {
       url = "github:cdmistman/mkAlias";
-      inputs.nixpkgs.follows = "nixpkgs-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixneovim.url = "github:nixneovim/nixneovim";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-locked.url = "github:NixOS/nixpkgs/1042fd8b148a9105f3c0aca3a6177fd1d9360ba5";
   };
 
   outputs = inputs @ {
@@ -30,6 +29,7 @@
     ...
   }: let
     userConfig = {
+      fullname = "Raphaël Lemaitre";
       username = "raphael.lemaitre";
       homeDirectory = "/Users/raphael.lemaitre";
     };
@@ -37,30 +37,22 @@
   in {
     darwinConfigurations."LMFR0150" = darwin.lib.darwinSystem {
       inherit system;
-      specialArgs = {inherit inputs;};
+      specialArgs = {
+        inherit inputs userConfig system;
+        hostname = "LMFR0150";
+      };
       modules = [
         {
           nixpkgs.overlays = [
-            # use selected unstable packages with pkgs.unstable.xyz
-            # https://discourse.nixos.org/t/how-to-use-nixos-unstable-for-some-packages-only/36337
-            # "https://github.com/ne9z/dotfiles-flake/blob/d3159df136294675ccea340623c7c363b3584e0d/configuration.nix"
             (final: prev: {
               unstable =
                 import inputs.nixpkgs-unstable {system = prev.system;};
             })
-
-            (final: prev: {
-              # pkgs.unstable-locked.<something>
-              unstable-locked =
-                import inputs.nixpkgs-locked {system = prev.system;};
-            })
-
             (final: prev: {
               # https://github.com/nix-community/home-manager/issues/1341#issuecomment-1468889352
               mkAlias =
                 inputs.mkAlias.outputs.apps.${prev.system}.default.program;
             })
-
             nixneovim.overlays.default
           ];
         }
@@ -80,6 +72,7 @@
           };
           home-manager.extraSpecialArgs = {
             inherit inputs userConfig;
+            hostname = "LMFR0150";
             # hack around nix-home-manager causing infinite recursion
             isLinux = false;
           };

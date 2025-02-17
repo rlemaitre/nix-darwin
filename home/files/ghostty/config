@@ -1,4 +1,4 @@
-theme = light:catppuccin-latte,dark:nord
+theme = light:Kanagawa Lotus,dark:Kanagawa Wave
 copy-on-select = true
 macos-titlebar-style = tabs
 window-theme = system

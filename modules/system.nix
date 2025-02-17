@@ -1,11 +1,9 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   # https://daiderd.com/nix-darwin/manual/index.html#sec-options
 
   time.timeZone = "Europe/Paris";
 
   system = {
-
     # activationScripts are executed every time you boot the system
     # or run `nixos-rebuild` / `darwin-rebuild`.
     activationScripts.postUserActivation.text = ''
@@ -83,7 +81,6 @@
         AppleMetricUnits = 1;
         AppleTemperatureUnit = "Celsius";
         AppleICUForce24HourTime = true;
-
       };
 
       # killall Dock to make them have effect
@@ -121,7 +118,6 @@
         _FXSortFoldersFirst = true;
       };
 
-
       # https://github.com/LnL7/nix-darwin/blob/master/modules/system/defaults/SoftwareUpdate.nix
       SoftwareUpdate = {
         # Automatically install Mac OS software updates
@@ -143,6 +139,13 @@
         StandardHideWidgets = true;
         StageManagerHideWidgets = true;
       };
+
+      CustomUserPreferences = {
+        "NSGlobalDomain" = {
+          # Disable "natural" scrolling for mouse
+          "com.apple.scrollwheel.scaling" = -1;
+        };
+      };
     };
 
     # error from nix-darwin without this one
@@ -162,8 +165,7 @@
 
   # load env vars set via home manager
   environment.extraInit = let
-    homeManagerSessionVars =
-      "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh";
+    homeManagerSessionVars = "/etc/profiles/per-user/$USER/etc/profile.d/hm-session-vars.sh";
   in ''
     [[ -f ${homeManagerSessionVars} ]] && source ${homeManagerSessionVars}
   '';

@@ -8,7 +8,6 @@
   # import sub modules
   imports = [
     ./bat/default.nix
-    ./docker/default.nix
     ./eza/default.nix
     ./fd/default.nix
     ./files/default.nix
@@ -16,7 +15,6 @@
     ./gh/default.nix
     ./gpg/default.nix
     ./lazygit/default.nix
-    ./mise/default.nix
     ./nixneovim/default.nix
     ./zed-editor/default.nix
   ];
