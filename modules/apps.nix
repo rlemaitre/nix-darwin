@@ -11,8 +11,6 @@
     git
     # github-copilot-intellij-agent # Copilot plugin for IntelliJ
     inkscape # Vector graphics editor
-    jetbrains.datagrip
-    jetbrains.idea-ultimate
     mos
     nil # nix language server
     nixd
@@ -54,6 +52,7 @@
       "betterdisplay" # Display management app
       "capacities" # Note taking app
       "chatgpt" # AI chatbot
+      "datagrip" # Database management
       "elgato-camera-hub" # Camera hub
       "elgato-stream-deck" # Stream deck
       "elgato-wave-link" # Wave link
@@ -62,6 +61,7 @@
       "font-fira-code-nerd-font" # Fira code nerd font
       "font-hack-nerd-font" # Hack nerd font
       "ghostty" # Terminal emulator
+      "intellij-idea"  # IDE
       "mutedeck" # Mute deck
       "obs" # Open Broadcaster Software
       "obs-advanced-scene-switcher" # Advanced scene switcher
