@@ -72,7 +72,7 @@
         PMPrintingExpandedStateForPrint2 = true;
 
         # Use function keys as standard function keys
-        "com.apple.keyboard.fnState" = true;
+        # "com.apple.keyboard.fnState" = true;
 
         # Enable "Natural" scrolling
         "com.apple.swipescrolldirection" = true;

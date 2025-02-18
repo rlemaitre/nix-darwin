@@ -79,6 +79,7 @@
       "shottr" # Screenshot app
       # "slack" # Slack
       "the-unarchiver" # Unarchiver
+      "vivaldi" # Web browser
     ];
 
     # mac app store
