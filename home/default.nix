@@ -7,6 +7,7 @@
 
   # import sub modules
   imports = [
+    ./direnv/default.nix
     ./bat/default.nix
     ./eza/default.nix
     ./fd/default.nix

@@ -8,6 +8,8 @@
   # install packages from nix's official package repository.
   environment.systemPackages = with pkgs; [
     alejandra
+    direnv
+    nix-direnv
     git
     # github-copilot-intellij-agent # Copilot plugin for IntelliJ
     inkscape # Vector graphics editor
@@ -17,6 +19,7 @@
     nixfmt # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-fmt#examples
     slack
     pkgs.unstable.usage
+    pkgs.unstable.hugo
   ];
 
   # To make this work, homebrew need to be installed manually, see
@@ -66,7 +69,6 @@
       "obs" # Open Broadcaster Software
       "obs-advanced-scene-switcher" # Advanced scene switcher
       "obs-backgroundremoval" # Background removal
-      "openaudible" # Audible audiobook converter
       "orbstack" # Docker Desktop replacement
       "orion" # Web Browser
       "philips-hue-sync" # Hue sync
