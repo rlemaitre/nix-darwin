@@ -14,6 +14,7 @@
     ./files/default.nix
     ./fzf/default.nix
     ./gh/default.nix
+    ./git/default.nix
     ./gpg/default.nix
     ./lazygit/default.nix
     ./nixneovim/default.nix

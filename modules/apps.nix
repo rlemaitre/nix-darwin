@@ -8,8 +8,6 @@
   # install packages from nix's official package repository.
   environment.systemPackages = with pkgs; [
     alejandra
-    direnv
-    nix-direnv
     git
     # github-copilot-intellij-agent # Copilot plugin for IntelliJ
     inkscape # Vector graphics editor

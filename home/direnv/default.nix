@@ -6,7 +6,7 @@
     mise = {
       enable = true;
     };
-    nx-direnv = {
+    nix-direnv = {
       enable = true;
     };
   };
