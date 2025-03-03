@@ -66,6 +66,8 @@
       };
       push = {
         default = "upstream";
+        autoSetupRemote = true;
+        followTags = true;
       };
       credential = {
         helper = "cache";
@@ -76,8 +78,44 @@
       branch = {
         sort = "-committerdate";
       };
+      tag = {
+        sort = "version:refname";
+      };
       column = {
         ui = "auto";
+      };
+      diff = {
+        algorithm = "histogram";
+        colorMoved = "plain";
+        mnemonicPrefix = true;
+        renames = true;
+      };
+      fetch = {
+        prune = true;
+        pruneTags = true;
+        all = true;
+      };
+      help = {
+        autocorrect = "prompt";
+      };
+      commit = {
+        verbose = true;
+      };
+      rerere = {
+        enabled = true;
+        autoupdate = true;
+      };
+      rebase = {
+        autoSquash = true;
+        autoStash = true;
+        updateRefs = true;
+      };
+      core = {
+        fsmonitor = true;
+        untrackedCache = true;
+      };
+      merge = {
+        conflictstyle = "zdiff3";
       };
     };
     ignores = [
