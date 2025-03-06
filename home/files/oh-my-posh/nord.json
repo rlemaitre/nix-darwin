@@ -17,6 +17,13 @@
           "style": "powerline"
         },
         {
+          "type": "nix-shell",
+          "style": "powerline",
+          "foreground": "blue",
+          "background": "transparent",
+          "template": "(nix-{{ .Type }})"
+        },
+        {
           "properties": {
             "cache_duration": "none"
           },

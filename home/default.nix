@@ -14,7 +14,8 @@
     ./files/default.nix
     ./fzf/default.nix
     ./gh/default.nix
-    ./git/default.nix
+    # ./ghostty/default.nix # uncomment when ghostty work on darwin
+    # ./git/default.nix
     ./gpg/default.nix
     ./lazygit/default.nix
     ./nixneovim/default.nix

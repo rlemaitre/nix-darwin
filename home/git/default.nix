@@ -28,12 +28,12 @@
             user = "rlemaitre";
           };
           core = {
-            sshCommand = "ssh -i ~/.ssh/rlemaitre.pem";
+            sshCommand = "ssh -i /Users/raphael.lemaitre/.ssh/rlemaitre.pem";
           };
         };
       }
       {
-        condition = "gitdir:~/Developer/github.com/LedgerHQ/*";
+        condition = "gitdir:/Users/raphael.lemaitre/Developer/github.com/LedgerHQ/*";
         contents = {
           user = {
             name = "Raphaël Lemaitre";
@@ -44,7 +44,7 @@
             user = "rlemaitre-ledger";
           };
           core = {
-            sshCommand = "ssh -i ~/.ssh/rlemaitre-ledger.pem";
+            sshCommand = "ssh -i /Users/raphael.lemaitre/.ssh/rlemaitre-ledger.pem";
           };
         };
       }

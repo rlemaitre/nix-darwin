@@ -2,3 +2,4 @@ theme = light:Kanagawa Lotus,dark:Kanagawa Wave
 copy-on-select = clipboard
 macos-titlebar-style = tabs
 window-theme = system
+window-inherit-working-directory = false

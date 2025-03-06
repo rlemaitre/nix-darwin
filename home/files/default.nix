@@ -1,5 +1,5 @@
 {userConfig, ...}: {
-  
+
   home.file = {
     "${userConfig.homeDirectory}/.config/ghostty" = {
       enable = true;
