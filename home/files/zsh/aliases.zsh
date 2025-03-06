@@ -27,7 +27,7 @@ alias grep="rg"
 alias diff="delta"
 alias top="gotop"
 
-function gwip() { 
+function gwip() {
   git add -A
   git rm  2> /dev/null
   git commit --no-verify --no-gpg-sign --message '--wip-- [skip ci]' $argv
@@ -44,3 +44,12 @@ alias pinentry='pinentry-mac'
 # fix fast typing
 alias brwe="brew"
 
+alias nix-shell='nix-shell --run $SHELL'
+function nix() {
+  if [[ $1 == "develop" ]]; then
+    shift
+    command nix develop -c $SHELL "$@"
+  else
+    command nix "$@"
+  fi
+}
