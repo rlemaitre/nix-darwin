@@ -18,6 +18,7 @@
     slack
     pkgs.unstable.usage
     pkgs.unstable.hugo
+    pkgs.unstable.zstd
   ];
 
   # To make this work, homebrew need to be installed manually, see
@@ -75,17 +76,21 @@
       "proton-pass" # Proton pass
       "protonvpn" # Proton VPN
       "raindropio" # Bookmark manager
+      "raspberry-pi-imager" # Raspberry Pi imager
       "raycast" # Raycast
       "shottr" # Screenshot app
       # "slack" # Slack
       "the-unarchiver" # Unarchiver
       "vivaldi" # Web browser
+      "yubico-authenticator" # Yubico authenticator
+      "yubico-yubikey-manager" # Yubikey manager
     ];
 
     # mac app store
     # click
     masApps = {
       amphetamine = 937984704;
+      neewer-control-center = 1664344174;
     };
   };
 }
