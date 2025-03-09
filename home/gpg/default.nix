@@ -31,6 +31,6 @@
 
     # prevent scdaemon error messages in syslog regarding a smart card reader
     # you don't have one
-    disable-scdaemon
+    # disable-scdaemon
   '';
 }

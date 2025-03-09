@@ -22,7 +22,7 @@
           user = {
             name = "Raphaël Lemaitre";
             email = "raphael@rlemaitre.com";
-            signingKey = "FA8F2AA7A6D1C219";
+            # signingKey = "FA8F2AA7A6D1C219";
           };
           github = {
             user = "rlemaitre";
@@ -38,7 +38,7 @@
           user = {
             name = "Raphaël Lemaitre";
             email = "raphael.lemaitre@ledger.fr";
-            signingKey = "90C3CD1F68B07B31";
+            # signingKey = "90C3CD1F68B07B31";
           };
           github = {
             user = "rlemaitre-ledger";
@@ -53,10 +53,11 @@
       enable = true;
       repositories = [];
     };
-    # signing = {
-      # signByDefault = true;
+    signing = {
+      signByDefault = true;
+      key = "BDE73D40CFD93F08";
       # gpgPath = "/etc/profiles/per-user/raphael.lemaitre/bin/gpg";
-    # };
+    };
     extraConfig = {
       format = {
         pretty = "oneline";
