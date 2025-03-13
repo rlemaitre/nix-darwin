@@ -18,6 +18,7 @@
     slack
     pkgs.unstable.usage
     pkgs.unstable.hugo
+    pkgs.unstable.presenterm
     pkgs.unstable.zstd
   ];
 
