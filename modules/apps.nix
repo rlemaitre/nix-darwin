@@ -57,6 +57,7 @@
       "chatgpt" # AI chatbot
       "datagrip" # Database management
       "elgato-camera-hub" # Camera hub
+      "elgato-capture-device-utility" # Video capture
       "elgato-stream-deck" # Stream deck
       "elgato-wave-link" # Wave link
       "fantastical" # Calendar app
