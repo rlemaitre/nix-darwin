@@ -7,7 +7,7 @@
     enableZshIntegration = true;
     package = pkgs.unstable.ghostty;
     settings = {
-      theme = "light:Kanagawa Lotus,dark:Kanagawa Wave";
+      theme = "light:Catpucin-latte,dark:Kanagawa Wave";
       copy-on-select = "clipboard";
       macos-titlebar-style = "tabs";
       window-theme = "system";

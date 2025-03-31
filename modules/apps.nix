@@ -14,7 +14,7 @@
     mos
     nil # nix language server
     nixd
-    nixfmt # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-fmt#examples
+    nixfmt-classic # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-fmt#examples
     slack
     pkgs.unstable.usage
     pkgs.unstable.hugo
@@ -54,7 +54,7 @@
       "beeper" # Multiprotocol instant messaging app
       "betterdisplay" # Display management app
       "capacities" # Note taking app
-      "chatgpt" # AI chatbot
+      "claude" # AI chatbot
       "datagrip" # Database management
       "elgato-camera-hub" # Camera hub
       "elgato-capture-device-utility" # Video capture
@@ -84,8 +84,8 @@
       # "slack" # Slack
       "the-unarchiver" # Unarchiver
       "vivaldi" # Web browser
-      "yubico-authenticator" # Yubico authenticator
-      "yubico-yubikey-manager" # Yubikey manager
+      # "yubico-authenticator" # Yubico authenticator
+      # "yubico-yubikey-manager" # Yubikey manager
     ];
 
     # mac app store

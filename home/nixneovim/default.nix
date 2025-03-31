@@ -621,7 +621,6 @@
         enable = true;
         theme = "nord";
       };
-      markdown-preview.enable = true;
       neogit = {
         enable = true;
         kind = "floating";
