@@ -84,7 +84,7 @@
       # "slack" # Slack
       "the-unarchiver" # Unarchiver
       "vivaldi" # Web browser
-      # "yubico-authenticator" # Yubico authenticator
+      "yubico-authenticator" # Yubico authenticator
       # "yubico-yubikey-manager" # Yubikey manager
     ];
 
