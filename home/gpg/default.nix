@@ -3,7 +3,6 @@
   programs.gpg = {
     enable = true;
     package = pkgs.gnupg24;
-    homedir= "${userConfig.homeDirectory}/.local/share/gnupg";
     scdaemonSettings = {
       "reader-port" = "Yubico Yubi";
     };

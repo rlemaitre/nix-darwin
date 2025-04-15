@@ -46,6 +46,7 @@
       "mise"
       "pinentry-mac"
       "usage"
+      "yubico-piv-tool"
     ];
 
     # brew install --cask
