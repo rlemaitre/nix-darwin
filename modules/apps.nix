@@ -11,6 +11,7 @@
     git
     # github-copilot-intellij-agent # Copilot plugin for IntelliJ
     inkscape # Vector graphics editor
+    git-machete
     mos
     nil # nix language server
     nixd

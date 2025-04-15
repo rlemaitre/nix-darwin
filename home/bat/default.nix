@@ -2,7 +2,7 @@
   programs.bat = {
     enable = true;
     config = {
-      theme = "Nord";
+      theme = "OneHalfLight";
       italic-text = "always";
     };
     extraPackages = with pkgs.bat-extras; [

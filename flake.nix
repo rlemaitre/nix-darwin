@@ -32,52 +32,59 @@
       fullname = "Raphaël Lemaitre";
       username = "raphael.lemaitre";
       homeDirectory = "/Users/raphael.lemaitre";
+      github = "rlemaitre";
+      email = "raphael@rlemaitre.com";
     };
     system = "aarch64-darwin"; # apple silicon
-  in {
-    darwinConfigurations."LMFR0150" = darwin.lib.darwinSystem {
-      inherit system;
-      specialArgs = {
-        inherit inputs userConfig system;
-        hostname = "LMFR0150";
-      };
-      modules = [
-        {
-          nixpkgs.overlays = [
-            (final: prev: {
-              unstable =
-                import inputs.nixpkgs-unstable {system = prev.system;};
-            })
-            (final: prev: {
-              # https://github.com/nix-community/home-manager/issues/1341#issuecomment-1468889352
-              mkAlias =
-                inputs.mkAlias.outputs.apps.${prev.system}.default.program;
-            })
-            nixneovim.overlays.default
-          ];
-        }
-        ./modules/nix-core.nix
-        ./modules/system.nix
-        ./modules/apps.nix
-        ./modules/host-users.nix
-        home-manager.darwinModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.${userConfig.username} = {
-            imports = [
-              nixneovim.nixosModules.default
-              ./home/default.nix
+    makeMacBookProConfig = name: darwin.lib.darwinSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs userConfig system;
+          hostname = name;
+        };
+        modules = [
+          {
+              nixpkgs.overlays = [
+              (final: prev: {
+                unstable =
+                  import inputs.nixpkgs-unstable {system = prev.system;};
+              })
+              (final: prev: {
+                # https://github.com/nix-community/home-manager/issues/1341#issuecomment-1468889352
+                mkAlias =
+                  inputs.mkAlias.outputs.apps.${prev.system}.default.program;
+              })
+              nixneovim.overlays.default
             ];
-          };
-          home-manager.extraSpecialArgs = {
-            inherit inputs userConfig;
-            hostname = "LMFR0150";
-            # hack around nix-home-manager causing infinite recursion
-            isLinux = false;
-          };
-        }
-      ];
+          }
+          ./modules/nix-core.nix
+          ./modules/system.nix
+          ./modules/apps.nix
+          ./modules/host-users.nix
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${userConfig.username} = {
+              imports = [
+                nixneovim.nixosModules.default
+                ./home/default.nix
+              ];
+            };
+            home-manager.extraSpecialArgs = {
+              inherit inputs userConfig;
+              hostname = name;
+              # hack around nix-home-manager causing infinite recursion
+              isLinux = false;
+            };
+          }
+        ];
+      };
+
+  in {
+    darwinConfigurations = {
+      "LMFR0150" = makeMacBookProConfig "LMFR0150";
+      athena = makeMacBookProConfig "athena";
     };
   };
 }
