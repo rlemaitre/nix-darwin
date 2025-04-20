@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+ {
   # https://daiderd.com/nix-darwin/manual/index.html#sec-options
 
   time.timeZone = "Europe/Paris";
@@ -153,15 +153,7 @@
   };
 
   # touchid for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
-
-  programs = {
-    zsh = {
-      # create /etc/zshrc that loads the nix-darwin environment,
-      # required if you want to use darwin's default shell - zsh
-      enable = true;
-    };
-  };
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # load env vars set via home manager
   environment.extraInit = let

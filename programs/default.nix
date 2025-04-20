@@ -8,6 +8,13 @@
   # import sub modules
   imports = [
     ./direnv/default.nix
+    # shells
+    ./bash/default.nix
+    ./fish/default.nix
+    ./zsh/default.nix
+    # databases
+    # ./postgresql/default.nix
+    # utilities
     ./bat/default.nix
     ./eza/default.nix
     ./fd/default.nix
@@ -18,7 +25,7 @@
     ./git/default.nix
     ./gpg/default.nix
     ./lazygit/default.nix
-    ./nixneovim/default.nix
+    # ./nixneovim/default.nix
     ./zed-editor/default.nix
   ];
 
@@ -27,6 +34,7 @@
     username = "${userConfig.username}";
     homeDirectory = "${userConfig.homeDirectory}";
     stateVersion = "24.11";
+    preferXdgDirectories = true;
   };
 
   # https://github.com/NixOS/nixpkgs/blob/master/pkgs/os-specific/darwin/
@@ -36,7 +44,6 @@
     delta
     fzf-git-sh
     git
-    gnupg
     hexyl
     lazygit
     oh-my-posh
@@ -48,4 +55,12 @@
     viu
     zoxide
   ];
+
+  xdg = {
+    enable = true;
+    cacheHome = "${userConfig.homeDirectory}/.cache";
+    configHome = "${userConfig.homeDirectory}/.config";
+    dataHome = "${userConfig.homeDirectory}/.local/share";
+    stateHome = "${userConfig.homeDirectory}/.local/state";
+  };
 }

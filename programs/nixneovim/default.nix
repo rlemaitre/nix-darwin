@@ -59,11 +59,11 @@
     };
     colorschemes = {
       catppuccin = {
-        enable = true;
+        enable = false;
         flavour = "latte";
       };
       nord = {
-        enable = false;
+        enable = true;
       };
     };
     defaultEditor = true;

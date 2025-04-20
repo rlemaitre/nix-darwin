@@ -3,7 +3,10 @@
     export PATH=$HOME/bin:$PATH
   '';
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowBroken = false;
+    allowUnfree = true;
+  };
 
   # install packages from nix's official package repository.
   environment.systemPackages = with pkgs; [
@@ -17,6 +20,7 @@
     nixd
     nixfmt-classic # https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-fmt#examples
     slack
+    pkgs.unstable.coursier
     pkgs.unstable.usage
     pkgs.unstable.hugo
     pkgs.unstable.presenterm
@@ -39,14 +43,18 @@
       upgrade = true;
     };
 
-    taps = [];
+    taps = [
+    ];
 
     # brew install
     brews = [
+      "bun"
+      "gnupg"
       "mise"
       "pinentry-mac"
       "usage"
-      "yubico-piv-tool"
+      "ykman"
+      "yubikey-personalization"
     ];
 
     # brew install --cask
@@ -57,6 +65,7 @@
       "betterdisplay" # Display management app
       "capacities" # Note taking app
       "claude" # AI chatbot
+      "cursor" # AI code assistant
       "datagrip" # Database management
       "elgato-camera-hub" # Camera hub
       "elgato-capture-device-utility" # Video capture
@@ -67,6 +76,7 @@
       "font-fira-code-nerd-font" # Fira code nerd font
       "font-hack-nerd-font" # Hack nerd font
       "ghostty" # Terminal emulator
+      "gpg-suite-no-mail" # GPG suite
       "intellij-idea"  # IDE
       "mutedeck" # Mute deck
       "obs" # Open Broadcaster Software
@@ -83,11 +93,14 @@
       "raspberry-pi-imager" # Raspberry Pi imager
       "raycast" # Raycast
       "shottr" # Screenshot app
+      "steam" # Steam
       # "slack" # Slack
       "the-unarchiver" # Unarchiver
       "vivaldi" # Web browser
+      "windsurf" # Windsurf AI IDE
       "yubico-authenticator" # Yubico authenticator
       # "yubico-yubikey-manager" # Yubikey manager
+      "zed" # Zed editor
     ];
 
     # mac app store

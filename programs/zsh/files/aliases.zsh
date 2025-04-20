@@ -14,18 +14,6 @@
 # General
 # -------
 
-alias ls='ls --color'
-alias vim='nvim'
-alias c='clear'
-# Show all files in the current directory
-alias ls="eza --git --git-repos --color=always --color-scale=all --color-scale-mode=gradient --all --icons always --smart-group --group-directories-first --hyperlink --modified --classify=always"
-alias ll="ls --long"
-alias l="ll --no-user --no-permissions --octal-permissions --time-style=relative"
-
-alias cat="bat"
-alias grep="rg"
-alias diff="delta"
-alias top="gotop"
 
 function gwip() {
   git add -A

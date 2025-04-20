@@ -3,13 +3,13 @@
 
   # format https://nixos.org/manual/nix/stable/command-ref/new-cli/nix3-flake.html#examples
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     darwin = {
-      url = "github:lnl7/nix-darwin/nix-darwin-24.11";
+      url = "github:nix-darwin/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     mkAlias = {
@@ -58,9 +58,13 @@
             ];
           }
           ./modules/nix-core.nix
+          ./modules/power.nix
           ./modules/system.nix
+          ./modules/environment.nix
+          ./modules/fonts.nix
           ./modules/apps.nix
           ./modules/host-users.nix
+          ./modules/databases.nix
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -68,7 +72,7 @@
             home-manager.users.${userConfig.username} = {
               imports = [
                 nixneovim.nixosModules.default
-                ./home/default.nix
+                ./programs/default.nix
               ];
             };
             home-manager.extraSpecialArgs = {

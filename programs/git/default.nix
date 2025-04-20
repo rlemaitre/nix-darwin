@@ -53,7 +53,7 @@
     };
     signing = {
       signByDefault = true;
-      key = "BDE73D40CFD93F08";
+      key = "D124CD601500A832";
     };
     extraConfig = {
       format = {

@@ -21,10 +21,5 @@
       source = ./zed;
       recursive = true;
     };
-    "${userConfig.homeDirectory}/.config/zsh" = {
-      enable = true;
-      source = ./zsh;
-      recursive = true;
-    };
   };
 }
