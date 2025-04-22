@@ -78,10 +78,13 @@
       "ghostty" # Terminal emulator
       "gpg-suite-no-mail" # GPG suite
       "intellij-idea"  # IDE
+      "jetbrains-toolbox" # Jetbrains toolbox
+      "lm-studio" # LM studio
       "mutedeck" # Mute deck
       "obs" # Open Broadcaster Software
       "obs-advanced-scene-switcher" # Advanced scene switcher
       "obs-backgroundremoval" # Background removal
+      "obsidian" # Note taking app
       "orbstack" # Docker Desktop replacement
       "orion" # Web Browser
       "philips-hue-sync" # Hue sync
