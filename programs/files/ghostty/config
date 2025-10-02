@@ -1,4 +1,4 @@
-theme = light:nord-light,dark:nord
+theme = light:Catppuccin Latte,dark:Kanagawa Wave
 copy-on-select = clipboard
 macos-titlebar-style = tabs
 window-theme = system

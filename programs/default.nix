@@ -25,7 +25,7 @@
     ./git/default.nix
     ./gpg/default.nix
     ./lazygit/default.nix
-    # ./nixneovim/default.nix
+    ./nixneovim/default.nix
     ./zed-editor/default.nix
   ];
 

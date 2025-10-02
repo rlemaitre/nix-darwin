@@ -14,7 +14,6 @@
 # General
 # -------
 
-
 function gwip() {
   git add -A
   git rm  2> /dev/null

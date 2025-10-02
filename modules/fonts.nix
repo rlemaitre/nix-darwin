@@ -20,6 +20,7 @@
       monocraft
       monoid
       mononoki
+      montserrat
       nacelle
       open-fonts
       open-sans

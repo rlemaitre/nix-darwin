@@ -9,7 +9,7 @@ export EDITOR=nvim
 export VISUAL=nvim
 
 # PATH
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$(brew --prefix)/bin:$HOME/.local/bin:$PATH"
 
 # Proton Drive directory
 export PROTON_DRIVE_DIR="$HOME/Library/CloudStorage/ProtonDrive-raphael@rlemaitre.com-folder"

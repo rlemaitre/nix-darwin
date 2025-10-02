@@ -521,7 +521,6 @@
           taplo.enable = true; # TOML Language Server
           terraform-ls.enable = true;
           typescript-language-server.enable = true;
-          vuels.enable = true;
         };
       };
       lspkind = {

@@ -1,12 +1,11 @@
 {userConfig, ...}: {
-
   programs = {
     zsh = {
       # create /etc/zshrc that loads the nix-darwin environment,
       # required if you want to use darwin's default shell - zsh
       enable = true;
       enableCompletion = true;
-      dotDir = "$userConfig.homeDirectory/.config/zsh";
+      dotDir = "${userConfig.homeDirectory}/.config/zsh";
     };
   };
 
@@ -17,6 +16,4 @@
       recursive = true;
     };
   };
-
 }
-

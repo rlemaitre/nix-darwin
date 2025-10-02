@@ -67,6 +67,7 @@
           ./modules/databases.nix
           home-manager.darwinModules.home-manager
           {
+            home-manager.backupFileExtension = ".backup-nix";
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${userConfig.username} = {

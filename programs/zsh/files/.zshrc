@@ -37,7 +37,7 @@ zinit snippet OMZP::command-not-found
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+if [[ "$TERM_PROGRAM" == "ghostty" ]]; then
   eval "$(oh-my-posh init zsh --config ${XDG_CONFIG_HOME:-$HOME/.config}/oh-my-posh/nord.json)"
 fi
 # Keybindings
@@ -76,6 +76,5 @@ source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/env.zsh"
 
 # >>> scala-cli completions >>>
 fpath=("/Users/raphael.lemaitre/Library/Application Support/ScalaCli/completions/zsh" $fpath)
-compinit
 # <<< scala-cli completions <<<
 eval "$(/opt/homebrew/bin/mise activate zsh)"
