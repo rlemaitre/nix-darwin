@@ -64,6 +64,7 @@
       "adguard"
       "beeper" # Multiprotocol instant messaging app
       "betterdisplay" # Display management app
+      "brainfm"
       "claude" # AI chatbot
       "discord" # Discord client
       "elgato-camera-hub" # Camera hub
